@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="author" content="{author}">
+  <meta name="description" content="{description}">
+  <meta name="keywords" content="{keywords}">
+
+  <base href="{baseHrefUrl}">
+  <link href="css/fonts.css?v1" rel="stylesheet">
+  <link href="css/styles.css?v1" rel="stylesheet">
+
+  <script src="js/highlight.pack.js?v1"></script>
+  <script src="js/b2d.js" defer></script>
+  <script src="js/codeExamplesWidget.js" defer></script>
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+      </symbol>
+      <symbol id="icon-discord" viewBox="0 0 24 24">
+        <path d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4.466.202 1.065.403 1.8.536.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z"></path>
+      </symbol>
+      <symbol id="icon-youtube" viewBox="0 0 16 16">
+        <path d="M6.6 0h-.9l-.6 2.3L4.5 0h-1c.2.6.4 1.1.6 1.7c.3.8.5 1.5.5 1.9V6h.9V3.6zM9 4.5V3c0-.5-.1-.8-.3-1.1s-.5-.4-.9-.4s-.7.2-.9.5c-.2.2-.3.5-.3 1v1.6c0 .5.1.8.3 1c.2.3.5.4.9.4s.7-.2.9-.5c.2-.1.3-.5.3-1m-.8.2c0 .4-.1.6-.4.6s-.4-.2-.4-.6V2.8c0-.4.1-.6.4-.6s.4.2.4.6zM12 6V1.5h-.8v3.4c-.2.3-.3.4-.5.4c-.1 0-.2-.1-.2-.2V1.5h-.8V5c0 .3 0 .5.1.7c0 .2.2.3.5.3s.6-.2.9-.5V6zm.4 4.5c-.3 0-.4.2-.4.6v.4h.8v-.4c0-.4-.1-.6-.4-.6m-2.9 0c-.1 0-.3.1-.4.2v2.7c.1.1.3.2.4.2q.3 0 .3-.6v-1.9q0-.6-.3-.6"></path>
+        <path d="M14.4 8.3C14.2 7.6 13.6 7 13 7c-1.6-.2-3.3-.2-5-.2s-3.3 0-5 .2c-.6 0-1.2.6-1.4 1.3c-.2 1-.2 2.1-.2 3.1s0 2.1.2 3.1c.2.7.7 1.2 1.4 1.3c1.7.2 3.3.2 5 .2s3.3 0 5-.2c.7-.1 1.3-.6 1.4-1.3c.2-1 .2-2.1.2-3.1s0-2.1-.2-3.1m-9.2.9h-1v5.1h-.9V9.2h-.9v-.9h2.8zm2.4 5.1h-.8v-.5c-.3.4-.6.5-.9.5s-.4-.1-.5-.3c0-.1-.1-.3-.1-.7V9.8h.8v3.5c0 .1.1.2.2.2c.2 0 .3-.1.5-.4V9.8h.8zm3-1.4c0 .4 0 .7-.1.9c-.1.3-.3.5-.6.5s-.6-.2-.8-.5v.4h-.8V8.3h.8v1.9c.3-.3.5-.5.8-.5s.5.2.6.5c.1.2.1.5.1.9zm3-.7H12v.8c0 .4.1.6.4.6c.2 0 .3-.1.4-.3v-.5h.8v.6c0 .2-.1.3-.2.5c-.2.3-.5.5-1 .5c-.4 0-.7-.2-1-.5c-.2-.2-.3-.6-.3-1v-1.5c0-.5.1-.8.2-1c.2-.3.5-.5 1-.5c.4 0 .7.2.9.5c.2.2.2.6.2 1v.8z"></path>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="page-header">
+    <a href="/" class="logo">Bullseye2D</a>
+
+    <input type="checkbox" id="burger-toggle" class="burger-toggle-checkbox">
+
+    <label for="burger-toggle" class="burger-menu" aria-label="Toggle menu">
+      <span class="material-symbols-outlined icon-menu">≣</span>
+      <span class="material-symbols-outlined icon-close">✖</span>
+    </label>
+
+    <nav>
+      <ul id="nav-menu">
+        <li><label for="burger-toggle"><a href="/">Home</a></label></li>
+        <li><label for="burger-toggle"><a href="/#features">Features</a></label></li>
+        <li><label for="burger-toggle"><a href="/#licensing">Licensing</a></label></li>
+        <li><label for="burger-toggle"><a href="/docs">Docs</a></label></li>
+        <li><label for="burger-toggle"><a href="/demos">Showcase</a></label></li>
+      </ul>
+    </nav>
+
+    <div class="header-social-links">
+      <a href="{links.github}" target="_blank" aria-label="GitHub">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+          <use href="#icon-github"></use>
+        </svg></a>
+      <a href="{links.discord}" target="_blank" aria-label="Discord">
+
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+          <use href="#icon-discord"></use>
+        </svg></a>
+      <a href="{links.youtube}" target="_blank" aria-label="YouTube">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16">
+          <use href="#icon-youtube"></use>
+        </svg></a>
+    </div>
+  </header>

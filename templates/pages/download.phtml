@@ -1,0 +1,89 @@
+    <main>
+        <section class="download-hero">
+            <h1>Install Bullseye2D</h1>
+            <p>Set up Bullseye2D and start building amazing 2D games with Dart.</p>
+        </section>
+
+        <div class="container">
+            <section class="installation-guide">
+                <h1>Installation Guide</h1>
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h2>Install Dart SDK</h2>
+                        <p>Ensure you have the Dart SDK (version 3.7.3 or higher recommended) installed on your system. If not, download and install it from the official Dart website.</p>
+                        <a href="https://dart.dev/get-dart" target="_blank" class="button">Get Dart SDK</a>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h2>Activate Webdev</h2>
+                        <p><code>webdev</code> is a command-line tool provided by the Dart team to build and serve web applications, including games made with Bullseye2D.</p>
+                        <pre><code class="language-bash">dart pub global activate webdev</code></pre>
+                        <p>If you encounter any issues, refer to the <a href="https://dart.dev/tools/webdev" target="_blank">official webdev documentation</a>.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h2>Activate Bullseye2D</h2>
+                        <p>The easiest way to get started is by activating Bullseye2D. This gives you access to the library core, examples, and development tools.</p>
+                        <pre><code class="language-bash">dart pub global activate bullseye2d</code></pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h2>Create Your First Project</h2>
+                        <p>Bullseye2D includes a handy tool to quickly scaffold a new game project:</p>
+                        <pre><code class="language-bash">bullseye2d create my_awesome_game</code></pre>
+                        <p>This will create a new project folder named <code>my_awesome_game</code>. Navigate into your new project:</p>
+                        <pre><code class="language-bash">cd ./my_awesome_game</code></pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h2>Run Your Game</h2>
+                        <p>Inside your new project directory (e.g., <code>my_awesome_game</code>), start the development server:</p>
+                        <pre><code class="language-bash">webdev serve</code></pre>
+                        <p>Open your web browser and navigate to <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> (or the address shown in your terminal) to see your game running!</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h2>Start Coding!</h2>
+                        <p>Congratulations! You're all set up. Open the <code>web/main.dart</code> file in your project directory with your favorite code editor and begin crafting your game logic.</p>
+                        <p>Happy game developing with Bullseye2D! 🎯</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="next-steps-section">
+                <h2>What's Next?</h2>
+                <p>Dive deeper into Bullseye2D and join our community.</p>
+                <div class="next-steps-buttons">
+                    <a href="/docs">Read the Docs</a>
+                    <a href="/demos">Explore Demos</a>
+                    <a href="{links.discord}" target="_blank">Join Community</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code.language-bash').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        });
+    </script>

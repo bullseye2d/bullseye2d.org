@@ -1,0 +1,45 @@
+<?php require(__DIR__ . '/header.phtml'); ?>
+<div class="email-header">
+  <h1>{emailTitle}</h1>
+</div>
+<div class="email-content">
+  <p>Dear {customerName},</p>
+  <p>Thank you for your purchase! We've successfully processed your payment for <span class="highlight">{productName}</span>.</p>
+  <p>{message}</p>
+
+  <h3>Order Summary:</h3>
+  <table>
+    <tr>
+      <th style="width:30%;">Item</th>
+      <th>Details</th>
+    </tr>
+    <tr>
+      <td class="summary-label">Product:</td>
+      <td>{productName}</td>
+    </tr>
+    <tr>
+      <td class="summary-label">Amount:</td>
+      <td>{amountFormatted}</td>
+    </tr>
+    <tr>
+      <td class="summary-label">Date:</td>
+      <td>{orderDate}</td>
+    </tr>
+    <?php if (isset($this->receiptUrl) && $this->receiptUrl): ?>
+      <tr>
+        <td class="summary-label">Receipt:</td>
+        <td><a href="{receiptUrl}" target="_blank" style="color: #4699ff; text-decoration: none;">View Receipt</a></td>
+      </tr>
+    <?php endif; ?>
+    <?php if (isset($this->invoiceUrl) && $this->invoiceUrl): ?>
+      <tr>
+        <td class="summary-label">Invoice:</td>
+        <td><a href="{invoiceUrl}" target="_blank" style="color: #4699ff; text-decoration: none;">View Invoice</a></td>
+      </tr>
+    <?php endif; ?>
+  </table>
+
+  <p>If you have any questions, feel free to contact me.</p>
+  <p>Happy Game Developing!<br>Jochen</p>
+</div>
+<?php require(__DIR__ . '/footer.phtml'); ?>

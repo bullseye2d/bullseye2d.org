@@ -1,0 +1,36 @@
+<?php echo <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{$pageTitle}</title>
+    <link rel="stylesheet" href="{$cssPath}">
+</head>
+<body class="error-page-dev">
+    <header class="site-header">
+        <a href="{$homeUrl}" class="logo">Bullseye2D</a>
+        <span class="error-header-status">{$statusCode} - {$errorTitleForHeader}</span>
+    </header>
+    <main class="error-content">
+        <div class="container">
+            <div class="error-details-card">
+                <h1 class="error-type-display">{$errorTypeDisplay}</h1>
+                <div class="error-message-box">{$message}</div>
+                <div class="file-info-box">
+                    <p><strong>File:</strong> <span class="file-path">{$file}</span></p>
+                    <p><strong>Line:</strong> <span class="line-number">{$line}</span></p>
+                </div>
+                <h2 class="stack-trace-title">Stack Trace</h2>
+                <div class="stack-trace-content">
+                    <pre><code class="language-text">{$traceString}</code></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+      <p>© Copyright {$currentYear} Asylum Square Interactive GmbH.</p>
+    </footer>
+</body>
+</html>
+HTML;

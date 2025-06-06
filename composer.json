@@ -1,0 +1,26 @@
+{
+    "name": "bullseye2d/bullseye2d-website",
+    "description": "The website of bullseye2d.org",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jochen Heizmann",
+            "email": "jochen@asylumsquare.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "stripe/stripe-php": "^17.3",
+        "altorouter/altorouter": "^2.0",
+        "phpmailer/phpmailer": "^6.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bullseye2D\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}

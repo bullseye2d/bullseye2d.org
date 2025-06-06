@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageTitle}</title>
+  <script src="js/highlight.pack.js?v1"></script>
+  <link rel="stylesheet" href="{cssPath}">
+</head>
+
+<body class="debug-dump-page">
+  <header class="site-header">
+    <span class="logo">Debug Dump</span>
+    <?php if (isset($this->callerFile) && isset($this->callerLine)): ?>
+      <div class="caller-info">
+        <?php
+        $filePathDisplay = $this->callerFile;
+        $projectRoot = realpath(BASE_DIRECTORY);
+        $realCallerFile = realpath($this->callerFile);
+        if ($projectRoot && $realCallerFile && strpos($realCallerFile, $projectRoot) === 0) {
+          $filePathDisplay = ltrim(str_replace($projectRoot, '', $realCallerFile), DIRECTORY_SEPARATOR);
+        }
+        ?>
+        Called from: <?php echo htmlspecialchars($filePathDisplay, ENT_QUOTES, 'UTF-8'); ?>
+        <br>Line: <?php echo htmlspecialchars($this->callerLine, ENT_QUOTES, 'UTF-8'); ?>
+      </div>
+    <?php endif; ?>
+  </header>
+
+  <div class="dump-container">
+    <?php if (empty($this->dumpedVariables)): ?>
+      <div class="dump-item">
+        <div class="dump-item-header"><span class="var-info">No variables dumped</span></div>
+        <div class="dump-item-content" style="padding:15px;">
+          <p style="margin:0;">The dd() function was called without any arguments.</p>
+        </div>
+      </div>
+    <?php else: ?>
+      <?php foreach ($this->dumpedVariables as $index => $var): ?>
+        <div class="dump-item">
+          <div class="dump-item-header">
+            <span class="var-info">
+              Variable #<?php echo $index + 1; ?>   |   Type: <?php echo htmlspecialchars(gettype($var), ENT_QUOTES, 'UTF-8'); ?>
+              <?php if (is_object($var)): ?>
+                  |   Class: <?php echo htmlspecialchars(get_class($var), ENT_QUOTES, 'UTF-8'); ?>
+              <?php elseif (is_array($var)): ?>
+                  |   Count: <?php echo count($var); ?>
+              <?php elseif (is_string($var)): ?>
+                  |   Length: <?php echo strlen($var); ?>
+              <?php endif; ?>
+            </span>
+            <?php if (isset($this->jsonForConsole[$index]) && $this->jsonForConsole[$index] !== false): ?>
+              <span class="console-link" onclick="sendToConsole(<?php echo $index; ?>)">Log to Console</span>
+            <?php endif; ?>
+          </div>
+          <div class="dump-item-content">
+            <pre><code class="language-php">
+            <?php
+            ob_start();
+            var_dump($var);
+            $dumpOutput = ob_get_clean();
+            echo htmlspecialchars($dumpOutput, ENT_NOQUOTES, 'UTF-8'); ?>
+            </code></pre>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    <?php endif; ?>
+  </div>
+
+  <footer class="site-footer">
+    <p>© Copyright {currentYear} Asylum Square Interactive GmbH.</p>
+  </footer>
+
+  <?php if (isset($this->jsonForConsole) && !empty($this->jsonForConsole)): ?>
+    <script>
+      const consoleJsonData = <?php echo json_encode($this->jsonForConsole) ?>;
+
+      function sendToConsole(index) {
+        if (consoleJsonData[index] !== false && consoleJsonData[index] !== null) {
+          console.log(`%cDumping PHP Variable #${index + 1} to console:`, "color: blue; font-weight: bold;");
+          try {
+            const parsedObject = JSON.parse(consoleJsonData[index]);
+            console.dir(parsedObject); // console.dir is good for objects
+          } catch (e) {
+            console.error("Error parsing JSON for console:", e);
+            console.log("Raw JSON string:", consoleJsonData[index]);
+          }
+        } else if (consoleJsonData[index] === null) {
+          console.log(`%cPHP Variable #${index + 1} (Object) could not be fully serialized to JSON (possibly due to recursion or unsupported types). Raw var_dump is shown on the page.`, "color: orange;");
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', (event) => {
+        if (typeof hljs !== 'undefined') {
+          document.querySelectorAll('.dump-item-content pre code.language-php').forEach((block) => {
+            hljs.highlightElement(block);
+          });
+        }
+      });
+    </script>
+  <?php endif; ?>
+</body>
+
+</html>

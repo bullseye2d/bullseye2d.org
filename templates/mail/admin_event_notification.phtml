@@ -1,0 +1,51 @@
+<?php require(__DIR__ . '/header.phtml'); ?>
+<div class="email-header">
+  <h1>{emailTitle}</h1>
+</div>
+<div class="email-content">
+  <p>Hello Admin,</p>
+
+  <h3>Event {eventType}</h3>
+  <table>
+    <tr>
+      <th style="width:30%;">Key</th>
+      <th>Value</th>
+    </tr>
+
+    <tr>
+      <td class="summary-label">Customer Name:</td>
+      <td>{customerName}</td>
+    </tr>
+    <tr>
+      <td class="summary-label">Product:</td>
+      <td>{productName}</td>
+    </tr>
+    <tr>
+      <td class="summary-label">Amount:</td>
+      <td>{amountFormatted}
+      </td>
+    </tr>
+    <tr>
+      <td class="summary-label">Status:</td>
+      <td>
+        {status}
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2 class="pre-container-cell">
+        <pre>
+                <?php
+                $dump = removeEmptyProperties(json_decode(json_encode($this->eventStripeObject)));
+                $dump = print_r($dump, true);
+                $dump = str_replace('stdClass Object', '', $dump);
+                $dump = str_replace('    ', '  ', $dump);
+                echo htmlspecialchars($dump);
+                ?>
+            </pre>
+      </td>
+    </tr>
+  </table>
+
+  <p>You can view more details directly in your Stripe Dashboard.</p>
+</div>
+<?php require(__DIR__ . '/footer.phtml'); ?>

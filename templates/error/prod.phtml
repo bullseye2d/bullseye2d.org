@@ -1,0 +1,31 @@
+<?php echo <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{$pageTitle}</title>
+    <link rel="stylesheet" href="{$cssPath}">
+</head>
+<body class="error-page-prod">
+    <header class="site-header">
+        <a href="{$homeUrl}" class="logo">Bullseye2D</a>
+         <span class="error-header-status">{$statusCode}</span>
+    </header>
+    <main class="error-content">
+        <div class="container"> <!-- This outer container helps with alignment -->
+            <div class="error-display-card">
+                <h1>{$displayTitle}</h1>
+                {$displayDetails}
+                <div class="actions">
+                    <a href="{$homeUrl}" class="button">Go to Homepage</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <p>© Copyright {$currentYear} Asylum Square Interactive GmbH.</p>
+    </footer>
+</body>
+</html>
+HTML;

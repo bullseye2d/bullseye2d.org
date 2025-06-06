@@ -1,0 +1,15 @@
+<div class="email-footer">
+  <p>© {currentYear} Asylum Square Interactive GmbH.</p>
+  <?php if (isset($this->pageConfig->links)): ?>
+    <p class="social-links">
+      Follow us:
+      <?php if (isset($this->pageConfig->links->github)): ?><a href="{pageConfig.links.github}" target="_blank">GitHub</a><?php endif; ?>
+      <?php if (isset($this->pageConfig->links->discord) && $this->pageConfig->links->discord !== '#dc'): ?><a href="{pageConfig.links.discord}" target="_blank">Discord</a><?php endif; ?>
+      <?php if (isset($this->pageConfig->links->youtube)): ?><a href="{pageConfig.links.youtube}" target="_blank">YouTube</a><?php endif; ?>
+    </p>
+  <?php endif; ?>
+</div>
+</div>
+</body>
+
+</html>

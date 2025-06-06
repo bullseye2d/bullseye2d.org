@@ -1,0 +1,231 @@
+{sourceCodeExamplesData}
+<main>
+  <section class="hero" id="home">
+    <h1>🎯 Bullseye2D</h1>
+    <p>An easy-to-use, high-performance 2D game library for Dart.</p>
+    <div class="hero-buttons">
+      <a href="./#overview">Overview</a>
+      <a href="./download">Download</a>
+    </div>
+  </section>
+
+  <div class="container">
+    <section class="layout-columns-2" id="overview">
+      <div>
+        <h1>Writing games is fun again</h1>
+        <p>Bullseye2D is a HTML5 game library for the <a href="https://dart.dev" target="_blank">Dart Programming Language</a>.</p>
+        <p>It provides a <span class="hl">simple</span> and straightforward API, and a <span class="hl">fast</span> WebGL renderer. You can <span class="hl">learn it in an evening</span> and start making awesome games right from the start.</p>
+        <p>It's made for developers who <span class="hl">love Dart</span> and want a solid foundation to make 2D games.</p>
+        <div class="text-tags">
+          <span class="tag">easy to use</span>
+          <span class="tag">no bloat</span>
+          <span class="tag">joy of crafting</span>
+          <span class="tag">fast</span>
+          <span class="tag">dart</span>
+          <span class="tag">web</span>
+          <span class="tag">free</span>
+        </div>
+      </div>
+      <div>
+        <div class="code-block-header">
+          <div class="code-example-selector">
+            <select id="code-example-select" name="code-example">
+            </select>
+          </div>
+
+          <div class="code-header-buttons">
+            <button id="copy-code-button" class="code-action-button" aria-label="Copy code to clipboard" title="Copy code">
+              <span class="material-symbols-outlined icon-copy"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                  <path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z" />
+                </svg></span>
+              <span class="material-symbols-outlined icon-copied" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                  <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                </svg></span>
+            </button>
+            <button id="toggle-code-expand" class="code-action-button" aria-label="Toggle code view size" title="Toggle code view size">
+              <span class="material-symbols-outlined icon-enlarge"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                  <path d="M120-120v-240h80v104l124-124 56 56-124 124h104v80H120Zm480 0v-80h104L580-324l56-56 124 124v-104h80v240H600ZM324-580 200-704v104h-80v-240h240v80H256l124 124-56 56Zm312 0-56-56 124-124H600v-80h240v240h-80v-104L636-580Z" />
+                </svg></span>
+              <span class="material-symbols-outlined icon-shrink" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+                  <path d="m136-80-56-56 264-264H160v-80h320v320h-80v-184L136-80Zm344-400v-320h80v184l264-264 56 56-264 264h184v80H480Z" />
+                </svg></span>
+            </button>
+          </div>
+        </div>
+        <div id="code-loader" style="display: flex; justify-content: center; align-items: center; min-height: 200px; background-color: var(--doc-code-bg); border-radius: var(--doc-border-radius-md); margin-bottom: 1rem; margin-top: 1rem;">
+          <span style="color: var(--doc-code-text-default); font-family: var(--doc-font-mono);">Loading code example...</span>
+        </div>
+        <pre id="code-display-pre" style="display: none;"><code class="language-dart" id="code-display-content"></code></pre>
+      </div>
+    </section>
+
+    <section class="layout-columns-3" id="features">
+      <article>
+        <h2>Graphics</h2>
+        <ul>
+          <li>Fast 2D Rendering</li>
+          <li>Automatic <strong>Sprite batching</strong></li>
+          <li>Different Blend modes</li>
+          <li>Draw <strong>Primitives</strong> and <strong>images</strong></li>
+          <li>Bitmap fonts (with ttf loader)</li>
+        </ul>
+      </article>
+      <article>
+        <h2>Input Handling</h2>
+        <ul>
+          <li>Keyboard, <strong>Gamepad</strong>, Mouse</li>
+          <li>Mobile support</li>
+          <li>Touch & Accelerometer</li>
+        </ul>
+      </article>
+      <article>
+        <h2>Audio</h2>
+        <ul>
+          <li>Play <strong>sounds and music</strong></li>
+          <li>Multi-channel audio</li>
+          <li>Sound <strong>retrigger delay</strong> control</li>
+          <li>Control volume, pan, pitch</li>
+        </ul>
+      </article>
+      <article>
+        <h2>Asset management</h2>
+        <ul>
+          <li>Easy loading of images, <strong>spritesheets</strong>, sounds, fonts, game data</li>
+          <li>Built-in progress loader</li>
+          <li>Texture <strong>caching</strong></li>
+        </ul>
+      </article>
+      <article>
+        <h2>Game Loop</h2>
+        <ul>
+          <li>Clear app lifecycle</li>
+          <li><strong>Fixed & variable timestep</strong></li>
+          <li>Auto-handles events (pause/resume)</li>
+          <li>Default <strong>loading screen</strong></li>
+        </ul>
+      </article>
+      <article>
+        <h2>Utils</h2>
+        <ul>
+          <li>Matrix stack for <strong>easy 2D transformations</strong> (translate, rotate, scale)</li>
+          <li>Math helpers</li>
+          <li>A flexible <strong>debugging logger</strong> with tagging and filtering capabilities</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="licensing">
+      <h1>Licensing & Sponsorship</h1>
+      <p>Bullseye2D's Core Edition is licensed under the <span class="hl">MIT License</span>, offering <span class="hl">freedom</span> to use, modify, and distribute your games.
+      </p>
+      <p>A <span class="hl">Premium Edition</span> is currently in development and will offer advanced and experimental features.
+        Sponsorship is a great way to support the project's ongoing development and to gain <span class="hl">early access</span> to the Premium Edition.
+      </p>
+      <p>All essential features for building and publishing games are, and will remain, <span class="hl">free</span> in the MIT-licensed Core Edition.
+      </p>
+
+
+      <details class="licensing-accessibility">
+        <summary>
+          <h4>About the Premium Edition</h4>
+        </summary>
+        <div class="details-content">
+          <p>We are hard at work developing the Bullseye2D <span class="hl">Premium Edition</span>, which will be packed with advanced
+            features to <span class="hl">supercharge</span> your game development. Supporters and sponsors will receive <span class="hl">early access</span> to the Premium Edition as it becomes available,
+            as a thank you for their vital support. Features that are stable might be moved to the core later.</p>
+          <p><strong>Planned features for the Premium Edition include:</strong></p>
+          <ul>
+            <li>Easy Scene Management</li>
+            <li>Sprite Animation System</li>
+            <li>Powerful Statemachine System</li>
+            <li>Fast 2D Collision Detection (<a href="https://en.wikipedia.org/wiki/Gilbert%E2%80%93Johnson%E2%80%93Keerthi_distance_algorithm" target="_blank">GJK</a>, Circles, Polygons)</li>
+            <li>Custom Shaders</li>
+            <li><a href="https://www.mapeditor.org/" target="_blank">TiledMap</a> Integration (Loading, Rendering, Animation, ...)</li>
+            <li><a href="https://www.codeandweb.com/texturepacker" target="_blank">TexturePacker</a> Loader</li>
+            <li>Full Game Examples to study and learn from</li>
+            <li>Simple <a href="https://en.wikipedia.org/wiki/Immediate_mode_(computer_graphics)" target="_blank">Immediate Mode GUI</a> Library with easy event handling</li>
+            <li>VanillaJS and Typescript Bindings</li>
+            <li>Support for native Windows, Mac and Linux builds</li>
+          </ul>
+        </div>
+      </details>
+
+      <div class="pricing-columns-3">
+        <article class="pricing-card">
+          <h3>🧡 Supporter</h3>
+          <div class="hl">One-time contribution</div>
+          <div class="price">$5</div>
+          <p>For individuals who love Bullseye2D and want to contribute to its <span class="hl">ongoing development</span>
+            with a <span class="hl">one-time tip.</span>
+          </p>
+          <hr>
+          <ul>
+            <li>Your contribution directly <strong>funds development</strong></li>
+            <li>Recognition as a <strong>Supporter</strong><br /><span class="subnote">on our GitHub Repository</span></li>
+            <li>Our <strong>heartfelt thanks!</strong></li>
+            <li>Helps keep the core free</li>
+            <li>Early access to <strong>Premium Edition</strong></li>
+          </ul>
+          <form action="./checkout/create-session/supporter" method="POST">
+            <button type="submit" class="button">Support Bullseye2D</button>
+          </form>
+        </article>
+
+        <article class="pricing-card">
+          <h3>🏆 Gold Sponsor</h3>
+          <div class="hl">Monthly subscription</div>
+          <div class="price">$29<span> / month</span></div>
+          <p>For <span class="hl">studios</span> and <span class="hl">companies</span> who want to actively support Bullseye2D and help shape its future.
+          </p>
+          <hr>
+          <ul>
+            <li>Early access to <strong>Premium Edition</strong></li>
+            <li>Logo placement (<strong>Gold Tier</strong>)<br /><span class="subnote">on website and GitHub Repository</span></li>
+            <li><strong>Priority bug fixes</strong> and <strong>feature requests</strong></li>
+            <li><strong>Direct help</strong> via email (fair use)</li>
+            <li>Recognition as a <strong>Gold Sponsor</strong></li>
+          </ul>
+          <form action="./checkout/create-session/gold" method="POST">
+            <button type="submit" class="button">Become a Gold sponsor</button>
+          </form>
+        </article>
+
+        <article class="pricing-card">
+          <h3>💎 Platinum Sponsor</h3>
+          <div class="hl">Monthly subscription</div>
+          <div class="price">$129<span> / month</span></div>
+          <p>For <span class="hl">studios</span> and <span class="hl">companies</span>
+            who want to <span class="hl">deeply support</span> Bullseye2D's growth.</p>
+          <hr>
+          <ul>
+            <li>Early access to <strong>Premium Edition</strong></li>
+            <li>Logo placement (<strong>Platinum Tier</strong>)<br /><span class="subnote">on website and GitHub Repository</span></li>
+            <li><strong>Highest priority</strong> for bugs and <strong>features</strong></li>
+            <li><strong>Private support channel</strong> (email/Discord)</li>
+            <li>Recognition as a <strong>top-tier sponsor</strong></li>
+          </ul>
+          <form action="./checkout/create-session/platinum" method="POST">
+            <button type="submit" class="button">Become a Platinum sponsor</button>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section id="sponsors">
+      <h2>Platinum Sponsors</h2>
+      <div class="sponsors-grid platinum">
+        <div class="sponsor-logo-placeholder">
+          <a href="https://winterworks.de"><img src="images/logos/winterworks.png" alt="WinterWorks Logo"></a>
+        </div>
+        <div class="sponsor-logo-placeholder">
+          <a href="https://asylumsquare.com"><img src="images/logos/asylumsquare.png" alt="Asylum Square Logo"></a>
+        </div>
+      </div>
+
+      <h3>Gold Sponsors</h3>
+      <div class="sponsors-grid gold">
+        <div class="sponsor-logo-placeholder"><a href="#licensing">Become a sponsor</a></div>
+      </div>
+    </section>
+  </div>
+</main>
