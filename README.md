@@ -66,4 +66,4 @@ We make use of the following beautiful and functional fonts to enhance readabili
 *   **[Inter](https://fonts.google.com/specimen/Inter)**: A variable font family carefully crafted & designed for computer screens.
 
 ### Support
-If you want to support us, please checkout the options on our [website](https://bullseye.org/#licensing)
+If you want to support us, please checkout the options on our [website](https://bullseye2d.org/#licensing)
