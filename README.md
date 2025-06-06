@@ -32,13 +32,13 @@ Website settings are loaded from a base file and then overridden by environment-
 *   **`config.dev.php`**:
     *   This file is for **development-specific settings**.
     *   You will need to **create and customize this file** in the root directory. You can use the structure of `config.php` as a starting point.
-    *   It should contain all your development API keys (e.g., Stripe test keys), test database credentials, mail server settings for development, and any other settings specific to your local development environment.
+    *   It should contain all your development API keys (e.g., Stripe test keys), mail server settings for development, and any other settings specific to your local development environment.
     *   Settings in `config.dev.php` will recursively merge with and override those from `config.php`
 
 *   **`config.prod.php`**:
     *   This file is for **production-specific settings**.
     *   Similar to `config.dev.php`, you will need to **create and populate this file** for your production deployment.
-    *   It must contain your live API keys, production database credentials, production mail server settings, etc.
+    *   It must contain your live API keys, production mail server settings, etc.
     *   Its settings will recursively merge with and override those from `config.php`
 
 ### 3. Run the Development Server
