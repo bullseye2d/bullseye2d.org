@@ -44,7 +44,6 @@ return [
             ]
         ]
     ],
-    // Let the loadConfig script in src/helpers.php figure out the environment
     'environment' => null,
     'mail' => [
         'username' => '',
