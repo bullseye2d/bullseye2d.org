@@ -47,7 +47,6 @@ return [
     'environment' => null,
     'mail' => [
         'username' => '',
-
         'name' => 'Bullseye2D Support',
         'password' => '',
         'host' => '',
