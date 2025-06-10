@@ -1,4 +1,4 @@
-import 'package2d:bullseye/bullseye.dart';
+import 'package:bullseye2d/bullseye2d.dart';
 
 class SpritesApp extends App {
   static const zoomFactor = 7.0;

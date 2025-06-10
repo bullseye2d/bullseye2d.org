@@ -1,4 +1,4 @@
-import 'package:bullseye2d/bullseye.dart';
+import 'package:bullseye2d/bullseye2d.dart';
 
 class HelloWorld extends App {
   @override

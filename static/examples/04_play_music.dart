@@ -1,4 +1,4 @@
-import 'package2d:bullseye/bullseye.dart';
+import 'package:bullseye2d/bullseye2d.dart';
 
 class MusicPlayer extends App {
   @override
