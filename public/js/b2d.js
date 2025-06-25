@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
   );
 
   const currentPage = navLinks.find((link) => link.href === basepath) || null;
+  
+  const isShowcasePage = basepath.includes('/demos') || basepath.includes('/bullseye2d-demos') || basepath.includes('/boing-demo');
+  const showcaseNavLink = navLinks.find((link) => link.getAttribute('href') === '/demos');
 
   const onScroll = () => {
     const pos = window.pageYOffset;
@@ -47,7 +50,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
       }
     } else {
-      highlight(currentPage);
+      if (isShowcasePage && showcaseNavLink) {
+        highlight(showcaseNavLink);
+      } else {
+        highlight(currentPage);
+      }
     }
   };
 

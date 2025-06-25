@@ -27,6 +27,8 @@ $router->map('GET', '/', function ($pageId) use ($page) {
 
 $router->map('GET', '/docs', null, 'docs');
 $router->map('GET', '/demos', null, 'demos');
+$router->map('GET', '/bullseye2d-demos', null, 'bullseye2d-demos');
+$router->map('GET', '/boing-demo', null, 'boing-demo');
 $router->map('GET', '/download', null, 'download');
 $router->map('GET', '/imprint', null, 'imprint');
 $router->map('GET', '/terms', null, 'terms');

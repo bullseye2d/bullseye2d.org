@@ -19,3 +19,6 @@ logs/
 /tools/deploy.php
 /tools/generate_docs_and_examples.sh
 /tools/listTaxRates.php
+public/boing-example/.dart_tool
+public/boing-example/packages
+public/boing-example/.build.manifest

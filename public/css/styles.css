@@ -1240,7 +1240,7 @@ main.docs-main-content {
   display: flex;
 }
 
-#docs-iframe {
+#iframe, #docs-iframe {
   flex-grow: 1;
   width: 100%;
   border: none;
@@ -1783,5 +1783,131 @@ body.debug-dump-page {
 
   .debug-dump-page .dump-item-content pre {
     padding: 10px;
+  }
+}
+
+/* Showcase Styles */
+.layout-columns-2 .showcase-item + .showcase-item {
+  margin-top: 2rem;
+}
+
+.showcase-item {
+  position: relative;
+  min-height: 250px;
+  border-radius: var(--doc-border-radius-md);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: var(--doc-shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.showcase-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.showcase-main-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-decoration: none;
+  color: inherit;
+  z-index: 1;
+}
+
+.showcase-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+  color: white;
+  padding: 1.5rem;
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+.showcase-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+}
+
+.showcase-content p {
+  margin: 0 0 1rem 0;
+  padding-right: 4rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.4;
+  color: white;
+}
+
+.showcase-links {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  z-index: 2;
+}
+
+.github-link,
+.tutorial-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.github-link:hover,
+.tutorial-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.github-link svg,
+.tutorial-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .layout-columns-2 .showcase-item + .showcase-item {
+    margin-top: 1.5rem;
+  }
+  
+  .showcase-item {
+    min-height: 200px;
+  }
+  
+  .showcase-content {
+    padding: 1rem;
+  }
+  
+  .showcase-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .showcase-content p {
+    font-size: 0.85rem;
+    padding-right: 3rem;
+  }
+  
+  .showcase-links {
+    bottom: 1rem;
+    right: 1rem;
   }
 }
