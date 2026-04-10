@@ -1,7 +1,7 @@
 <?php
 return [
     'page' => [
-        'title' => 'Bullseye 2D xx',
+        'title' => 'Bullseye 2D',
         'author' => 'Jochen Heizmann',
         'keywords' => 'game, dev, indie, game development, engine, library, 2d, gl, webgl, opengl, dart',
         'description' => 'A 2D Game Engine for Dart.',
