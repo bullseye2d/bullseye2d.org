@@ -23,7 +23,7 @@ return [
                 'mode' => 'payment',
                 'price' => '',
                 'mail' => [
-                    'checkoutCompleted' => "Thank you so much for supporting Bullseye2D. Your support helps keep the project going and is a great motivator for me to keep building and imporving. I will contact you soon regarding your early access to the Premium Edition."
+                    'checkoutCompleted' => "Thank you so much for supporting Bullseye2D! Your support helps keep the project going and is a great motivator for me to keep building and improving."
                 ],
             ],
             'gold' => [
@@ -31,7 +31,7 @@ return [
                 'mode' => 'subscription',
                 'price' => '',
                 'mail' => [
-                    'checkoutCompleted' => 'Welcome as a Bullseye2D Gold Sponsor! Your generous support helps us grow and improve the engine. I will contact you soon, so we can get your logo on the website as soon as possible. You will also then get early access to the premium edition.'
+                    'checkoutCompleted' => 'Welcome as a Bullseye2D Gold Sponsor! Your generous support helps us grow and improve the engine. I will contact you soon, so we can get your logo on the website as soon as possible.'
                 ],
             ],
             'platinum' => [
@@ -39,7 +39,7 @@ return [
                 'mode' => 'subscription',
                 'price' => '',
                 'mail' => [
-                    'checkoutCompleted' => 'A huge thank you for becoming a Bullseye2D Platinum Sponsor! Your top-tier support is invaluable. I will contact you soon to get your logo on the Bullseye2D website as soon as possible. You will also get early access to the Premium Edition as well.'
+                    'checkoutCompleted' => 'A huge thank you for becoming a Bullseye2D Platinum Sponsor! Your top-tier support is invaluable. I will contact you soon to get your logo on the Bullseye2D website as soon as possible.'
                 ],
             ]
         ]
