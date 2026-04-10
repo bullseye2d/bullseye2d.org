@@ -1,6 +1,8 @@
 import 'package:bullseye2d/bullseye2d.dart';
 
 class HelloWorld extends App {
+  HelloWorld([AppConfig? config]) : super(config);
+
   @override
   onRender() {
     gfx.clear(0, 0, 0);

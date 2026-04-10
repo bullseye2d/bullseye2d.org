@@ -1,13 +1,15 @@
 import 'package:bullseye2d/bullseye2d.dart';
 
 class SpritesApp extends App {
+  SpritesApp([AppConfig? config]) : super(config);
+
   static const zoomFactor = 7.0;
   late Images sprites;
   double frame = 0;
 
   @override
   onCreate() async {
-    final spriteSheet = "my_sheet.png";
+    final spriteSheet = "assets/my_sheet.png";
     sprites = resources.loadImage(spriteSheet,
       frameWidth: 32, frameHeight: 32);
   }

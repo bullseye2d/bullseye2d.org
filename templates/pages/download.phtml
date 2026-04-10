@@ -12,23 +12,13 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h2>Install Dart SDK</h2>
-                        <p>Ensure you have the Dart SDK (version 3.7.3 or higher recommended) installed on your system. If not, download and install it from the official Dart website.</p>
+                        <p>Ensure you have the Dart SDK (version 3.7.2 or higher) installed on your system. If not, download and install it from the official Dart website.</p>
                         <a href="https://dart.dev/get-dart" target="_blank" class="button">Get Dart SDK</a>
                     </div>
                 </div>
 
                 <div class="step">
                     <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h2>Activate Webdev</h2>
-                        <p><code>webdev</code> is a command-line tool provided by the Dart team to build and serve web applications, including games made with Bullseye2D.</p>
-                        <pre><code class="language-bash">dart pub global activate webdev</code></pre>
-                        <p>If you encounter any issues, refer to the <a href="https://dart.dev/tools/webdev" target="_blank">official webdev documentation</a>.</p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
                     <div class="step-content">
                         <h2>Activate Bullseye2D</h2>
                         <p>The easiest way to get started is by activating Bullseye2D. This gives you access to the library core, examples, and development tools.</p>
@@ -37,7 +27,7 @@
                 </div>
 
                 <div class="step">
-                    <div class="step-number">4</div>
+                    <div class="step-number">3</div>
                     <div class="step-content">
                         <h2>Create Your First Project</h2>
                         <p>Bullseye2D includes a handy tool to quickly scaffold a new game project:</p>
@@ -48,20 +38,22 @@
                 </div>
 
                 <div class="step">
-                    <div class="step-number">5</div>
+                    <div class="step-number">4</div>
                     <div class="step-content">
                         <h2>Run Your Game</h2>
-                        <p>Inside your new project directory (e.g., <code>my_awesome_game</code>), start the development server:</p>
-                        <pre><code class="language-bash">webdev serve</code></pre>
-                        <p>Open your web browser and navigate to <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> (or the address shown in your terminal) to see your game running!</p>
+                        <p>Inside your new project directory, run on the web:</p>
+                        <pre><code class="language-bash">bullseye2d run web</code></pre>
+                        <p>Open your browser at <a href="http://localhost:8080" target="_blank">http://localhost:8080</a> to see your game running!</p>
+                        <p>Or run on desktop via SDL3:</p>
+                        <pre><code class="language-bash">bullseye2d run sdl3</code></pre>
                     </div>
                 </div>
 
                 <div class="step">
-                    <div class="step-number">6</div>
+                    <div class="step-number">5</div>
                     <div class="step-content">
                         <h2>Start Coding!</h2>
-                        <p>Congratulations! You're all set up. Open the <code>web/main.dart</code> file in your project directory with your favorite code editor and begin crafting your game logic.</p>
+                        <p>Congratulations! You're all set up. Open <code>lib/game.dart</code> in your favorite code editor and start crafting your game logic. Both web and desktop entry points share this file, so you write your game once and run it anywhere.</p>
                         <p>Happy game developing with Bullseye2D! 🎯</p>
                     </div>
                 </div>
